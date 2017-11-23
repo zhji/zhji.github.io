@@ -46,7 +46,7 @@ EOF
 
   git init
   git config user.name "zhangjingl02"
-  git config user.email "zhangjingl02@126.com"
+  git config user.email "zhangjing266@gmail.com"
   git add .
   git commit -m "Build by Travis CI($TRAVIS_JOB_ID)"
   git push  "https://${GH_TOKEN}@${GH_REF}" master:master
