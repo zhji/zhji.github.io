@@ -45,8 +45,8 @@ Job NUM  | $TRAVIS_JOB_NUMBER |
 EOF
 
   git init
-  git config user.name "shenliyang"
-  git config user.email ""
+  git config user.name "zhangjingl02"
+  git config user.email "zhangjingl02@126.com"
   git add .
   git commit -m "Build by Travis CI"
   git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
