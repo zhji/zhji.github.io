@@ -49,7 +49,7 @@ EOF
   git config user.email "zhangjing266@gmail.com"
   git add .
   git commit -m "Build by Travis CI($TRAVIS_JOB_ID)"
-  git push  "https://${GH_TOKEN}@${GH_REF}" master:master
+  git push -f -q  "https://${GH_TOKEN}@${GH_REF}" master:master
   echo push successfully
 } 
 
