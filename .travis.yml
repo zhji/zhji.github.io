@@ -3,7 +3,7 @@ node_js: stable
 
 sudo: false 
 
-#cache confi
+#cache config
 cache:
   directories:
     - "node_modules"
