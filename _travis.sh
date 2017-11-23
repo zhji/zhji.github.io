@@ -21,14 +21,18 @@ function failure(){
 #默认执行
 function default(){
 
+  git config user.name "zhangjingl02"
+  git config user.email "zhangjing266@gmail.com"
+
   git clone https://${GH_REF} .deploy_git
   cd .deploy_git
 
   git checkout master
   cd ../
 
-  mv .deploy_git/.git/ ./public/
-  cd ./public
+  rm -rf .deploy_git/*
+  git rm
+  cp -rf ./public/* .deploy_git/
 
 cat <<EOF >> README.md 
 部署状态 | 集成结果 | 参考值
@@ -44,9 +48,6 @@ Job ID   | $TRAVIS_JOB_ID |
 Job NUM  | $TRAVIS_JOB_NUMBER | 
 EOF
 
-  git init
-  git config user.name "zhangjingl02"
-  git config user.email "zhangjing266@gmail.com"
   git add .
   git commit -m "Build by Travis CI($TRAVIS_JOB_ID)"
   git push -f -q  "https://${GH_TOKEN}@${GH_REF}" master:master
