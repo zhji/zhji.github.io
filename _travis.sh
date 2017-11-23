@@ -49,7 +49,7 @@ EOF
   git config user.email "zhangjingl02@126.com"
   git add .
   git commit -m "Build by Travis CI"
-  git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" gh-pages:gh-pages
+  git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
 } 
 
 case $1 in 
